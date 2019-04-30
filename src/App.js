@@ -6,8 +6,9 @@ class App extends Component{
     super(props);
     this.state = {
       currentInput1: "",
-      currentInput2: "", 
+      currentInput2: "",
       currentInput3: "", 
+      currentInput4: ""
 
     }
   }
@@ -29,12 +30,19 @@ class App extends Component{
     });
   }
 
+  updateInput4 = (value) =>{
+    this.setState({
+      currentInput4: value.target.value
+    });
+  }
+
   handleSubmit = (e) =>{
     e.preventDefault();
     this.setState({
       currentInput1: "",
       currentInput2: "", 
-      currentInput3: "", 
+      currentInput3: "",
+      currentInput4: "",
     });
   }
   render(){
@@ -49,6 +57,11 @@ class App extends Component{
       <label>
         Room Number
       <input type = "text" value = {this.state.currentInput2} onChange = {this.updateInput2}/>< br></br>
+      </label>
+
+      <label>
+        Location of Problem
+      <input type = "text" value = {this.state.currentInput4} onChange = {this.updateInput4}/>< br></br>
       </label>
 
       <label>
