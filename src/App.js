@@ -1,26 +1,66 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      currentInput1: "",
+      currentInput2: "", 
+      currentInput3: "", 
+
+    }
+  }
+
+  updateInput1 = (value) =>{
+    this.setState({
+      currentInput1: value.target.value
+    });
+  }
+  updateInput2 = (value) =>{
+    this.setState({
+      currentInput2: value.target.value
+    });
+  }
+
+  updateInput3 = (value) =>{
+    this.setState({
+      currentInput3: value.target.value
+    });
+  }
+
+  handleSubmit = (e) =>{
+    e.preventDefault();
+    this.setState({
+      currentInput1: "",
+      currentInput2: "", 
+      currentInput3: "", 
+    });
+  }
+  render(){
+    return (
+      <div className = "App">
+      <form onSubmit>
+      <label>
+        Name
+      <input type= "text" value = {this.state.currentInput1} onChange = {this.updateInput1}/> < br></br>
+      </label>
+
+      <label>
+        Room Number
+      <input type = "text" value = {this.state.currentInput2} onChange = {this.updateInput2}/>< br></br>
+      </label>
+
+      <label>
+        Comments
+      <textarea value ={this.state.currentInput3} onChange = {this.updateInput3}></textarea> < br></br>
+      </label>
+      <button type="submit" onClick={this.handleSubmit}>Submit</button>
+      </form>
+      </div> 
+
+    );
+  }
 }
 
 export default App;
