@@ -48,6 +48,7 @@ class App extends Component{
   render(){
     return (
       <div className = "App">
+      <h1>Laundry Cats Work Order Form</h1>
       <form onSubmit>
       <label>
         Name
