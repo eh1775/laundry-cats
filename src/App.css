@@ -49,3 +49,12 @@ body {
       border: solid 1px #fff;
       color: #476375;
     }
+  img{
+      display: block;
+      margin-left: auto;
+      width: 150px;
+      height: 200px;
+      margin-right: auto;
+      width: 70%;
+      height: 50%;
+  }
