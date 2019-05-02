@@ -37,6 +37,7 @@ class App extends Component{
   }
 
   handleSubmit = (e) =>{
+    alert('Your response was submitted');
     e.preventDefault();
     this.setState({
       currentInput1: "",
