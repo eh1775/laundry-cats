@@ -51,22 +51,22 @@ class App extends Component{
       <h1>Laundry Cats Work Order Form</h1>
       <form onSubmit>
       <label>
-        Name
+        Name: 
       <input type= "text" value = {this.state.currentInput1} onChange = {this.updateInput1}/> < br></br>
       </label>
 
       <label>
-        Room Number
+        Room Number: 
       <input type = "text" value = {this.state.currentInput2} onChange = {this.updateInput2}/>< br></br>
       </label>
 
       <label>
-        Location of Problem
+        Location of Problem: 
       <input type = "text" value = {this.state.currentInput4} onChange = {this.updateInput4}/>< br></br>
       </label>
 
       <label>
-        Comments
+        Comments: 
       <textarea value ={this.state.currentInput3} onChange = {this.updateInput3}></textarea> < br></br>
       </label>
       <button type="submit" onClick={this.handleSubmit}>Submit</button>
