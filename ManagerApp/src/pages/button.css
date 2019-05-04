@@ -1,0 +1,18 @@
+
+.normalButton{
+background-color: white;
+color: black;
+}
+
+.clickedButton{
+background-color: rgba(245, 185, 136, 0.397);
+color: black;
+}
+
+.select{
+display: flex;
+justify-content: center;
+height:21px;
+
+}
+
