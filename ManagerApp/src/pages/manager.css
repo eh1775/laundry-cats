@@ -1,8 +1,16 @@
 .MachineArea{
-    height:150px;
-    width: 200px;
+    height:180px;
+    width: 190px;
 }
 img{
-    margin-left: 85px;
+    margin-left: 80px;
     
 }
+.allmachines{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* h1{
+    height: 20px;
+    font-size: 15px;
+} */

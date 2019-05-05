@@ -77,7 +77,7 @@ class App extends Component {
     const { showBack } = this.state
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 50 }}>
-        <div style={{ background: 'white', height: 600, width: 400, border: '1px solid #ddd' }}>
+        <div style={{ background: 'white', height: 650, width: 400, border: '1px solid #ddd' }}>
           {!showBack ? null : (
             <div
               style={{
