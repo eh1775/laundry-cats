@@ -9,7 +9,6 @@
 // export default Worder;
 
 import { Link } from 'react-router-dom';
-
 import React from 'react';
 import Buttons from './Buttons';
 import './manager.css'
@@ -20,21 +19,29 @@ var logoStyle = {
   width: '30px',
   height: '36px',
 };
+// const {datalist} = this.props.location.state
+//     let floorN = datalist[1];
+//     let machineN = datalist[2]
 
 class Manager extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     bttn1: 
-  //       [{ 0: false },
-  //       { 1: true },
-  //       { 2: false }],
-  //     bttn2:
-  //       [{ 0: true },
-  //       { 1: false },
-  //       { 2: false }]
-  //     ,
-  //   }
+  constructor(props) {
+    super(props);
+    this.state = {
+      // fn: floorN,
+      // mn: machineN
+    }
+  }
+  test = () => {
+    // const {datalist} = this.props.location.state
+    // let floorN = datalist[1];
+    // let machineN = datalist[2]
+    // this.setState({
+    //   fn: floorN,
+    //   mn: machineN
+    // })
+    console.log(this.props.location.state[1])
+  }
+
   goBack = () => {
     window.history.go(-1)
   }
@@ -42,8 +49,8 @@ class Manager extends React.Component {
   render() {
     return (
       <div>
-
-        <h1 style={{ paddingLeft: '30px' }}>F2</h1>
+        <div>{this.test()}</div>
+        <h1 style={{ paddingLeft: '30px' }}>Floor {this.props.location.state[1]}</h1>
         <div className='allmachines'>
           <div className='MachineArea'>
             <p style={{ textAlign: 'center' }}>#3</p>

@@ -25,41 +25,6 @@ const routes = [
 ]
 
 class App extends Component {
-  // render() {
-
-  //   return (
-  //     <div>
-  //       <Header style={{ background: '#fff', textAlign: 'center', padding: 0 }}>
-
-  //         <Link to="/">Home</Link>
-
-  //         <Link to="/Manager">Manager Edit</Link>
-
-  //         <Link to="/Worder">Work Order</Link>
-
-  //       </Header>
-  //       <div>
-  //         <Content style={{ margin: '24px 16px 0' }}>
-  //           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-  //             {this.props.children}
-  //           </div>
-  //         </Content>
-  //       </div>
-  //       <div>
-  //         <Footer style={{ textAlign: 'center' }}>LaundryCats ©2019 Created by Emily, Eszter, Kertu, and Selina</Footer>
-  //       </div>
-
-
-  //       {/* <ul>
-  //         <li><Link to="/">Home</Link></li>
-  //         <li><Link to="/Manager">Manager Edit</Link></li>
-  //         <li><Link to="/Worder">Work Order</Link></li>
-  //       </ul>
-  //       {this.props.children} */}
-  //     </div>
-
-  //   );
-  // }
 
 
   state = {
