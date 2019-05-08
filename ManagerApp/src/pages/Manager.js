@@ -1,29 +1,15 @@
 import React from 'react';
 import Buttons from './Buttons';
-import './manager.css'
-// import 
+import './manager.css';
+
 
 var logoStyle = {
   width: '30px',
   height: '36px',
 };
 
-
 class Manager extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     bttn1: 
-  //       [{ 0: false },
-  //       { 1: true },
-  //       { 2: false }],
-  //     bttn2:
-  //       [{ 0: true },
-  //       { 1: false },
-  //       { 2: false }]
-  //     ,
-  //   }
-
+  
   
   render() {
     return (
