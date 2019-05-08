@@ -27,19 +27,18 @@ class Manager extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // fn: floorN,
-      // mn: machineN
+      fn: '',
+      mn: ''
     }
   }
-  test = () => {
-    // const {datalist} = this.props.location.state
-    // let floorN = datalist[1];
-    // let machineN = datalist[2]
-    // this.setState({
-    //   fn: floorN,
-    //   mn: machineN
-    // })
-    console.log(this.props.location.state[1])
+  componentDidMount () {
+    const {datalist} = this.props.location.state
+    let floorN = datalist[1];
+    let machineN = datalist[2]
+    this.setState({
+      fn: floorN,
+      mn: machineN
+    })
   }
 
   goBack = () => {
@@ -49,8 +48,8 @@ class Manager extends React.Component {
   render() {
     return (
       <div>
-        <div>{this.test()}</div>
-        <h1 style={{ paddingLeft: '30px' }}>Floor {this.props.location.state[1]}</h1>
+        <div>{this.test}</div>
+        <h1 style={{ paddingLeft: '30px' }}>Floor {this.state.fn}</h1>
         <div className='allmachines'>
           <div className='MachineArea'>
             <p style={{ textAlign: 'center' }}>#3</p>
