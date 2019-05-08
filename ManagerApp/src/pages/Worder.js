@@ -35,7 +35,9 @@ class Manager extends React.Component {
   //       { 2: false }]
   //     ,
   //   }
-
+  goBack = () => {
+    window.history.go(-1)
+  }
 
   render() {
     return (
@@ -63,7 +65,7 @@ class Manager extends React.Component {
         <br />
         <br />
         {/* <Link to="/Home"> */}
-        <Button size="large" style={{ margin: '30px' }}>
+        <Button onClick={this.goBack} size="large" style={{ margin: '30px' }}>
           Only Change Status
 				</Button>
         {/* </Link> */}
