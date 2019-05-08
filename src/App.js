@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
 
+import firebase from 'firebase';
+import {firebase_config} from './firebase_config.js'
+firebase.initializeApp(firebase_config);
+const database = firebase.database();
+
 class App extends Component{
   constructor(props){
     super(props);
@@ -12,6 +17,20 @@ class App extends Component{
       currentInput4: ""
 
     }
+  }
+  pushToDB(){
+    // Level 1 - read this if you are coming here from Levels/LevelONE.js
+    // 
+    // this is where want to create a simple function to push data to
+    // our Firebase project. To test the function, we use a dummy 
+    // button in this very component (prepared below)
+
+    // alert("Dummy button works!");
+
+    // we can learn how to push to the database from here:
+    // https://firebase.google.com/docs/database/web/lists-of-data
+    let reference = database.ref("Facility Request");
+    reference.push( {floor: this.state.currentInput1, machine: this.state.currentInput2, problem: this.state.currentInput3, comments: this.state.currentInput4}  );
   }
 
   updateInput1 = (value) =>{
@@ -39,6 +58,7 @@ class App extends Component{
 
   handleSubmit = (e) =>{
     alert('Thank you! Your response was submitted');
+    this.pushToDB()
     e.preventDefault();
     this.setState({
       currentInput1:"",
