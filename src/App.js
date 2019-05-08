@@ -38,10 +38,10 @@ class App extends Component{
   }
 
   handleSubmit = (e) =>{
-    alert('Your response was submitted');
+    alert('Thank you! Your response was submitted');
     e.preventDefault();
     this.setState({
-      currentInput1: "",
+      currentInput1:"",
       currentInput2: "", 
       currentInput3: "",
       currentInput4: "",
@@ -52,24 +52,64 @@ class App extends Component{
       <div className = "App">
       <img src={logo}/>
       <form onSubmit>
-      <label>
-        Name: 
-      <input type= "text" value = {this.state.currentInput1} onChange = {this.updateInput1}/> < br></br>
-      </label>
+
+     
+      
+      <br></br> 
+      <select type = "text" value = {this.state.currentInput1} onChange = {this.updateInput1}> 
+      <option value="" disabled selected>Floor #</option> 
+      <option> 1</option>
+      <option> 2</option>
+      <option> 3</option>
+      <option> 4</option>
+      <option> 5</option>
+      <option> 6</option>
+      <option> 7</option>
+      <option> 8</option>
+      <option> 9</option>
+      <option> 10</option>
+      <option> 11</option>
+      </select>
+    
+    
+      <br></br>
+      <select type = "text" value = {this.state.currentInput2} onChange = {this.updateInput2}>
+      <option value="" disabled selected>Machine #</option> 
+      <option> A</option>
+      <option> B</option>
+      <option> C</option>
+      <option> D</option>
+      <option> E</option>
+      <option> F</option>
+      <option> G</option>
+      <option> H</option>
+      <option> I</option>
+      <option> J</option>
+      <option> K</option>
+      </select>
+    
+
+      <br></br>
+      <select type = "text" value = {this.state.currentInput3} onChange = {this.updateInput3}> 
+      <option value="" disabled selected>Problem</option> 
+      <option> Won't fill with water</option>
+      <option> The door won't open </option>
+      <option> Does not spin </option>
+      <option> Stopped mid-cicle </option>
+      <option> Weird noises </option>
+      <option> Water not draining from washing machine </option>
+      <option> Machine is displaying an error </option>
+      <option> Weird smell</option>
+      <option> Other...</option>
+     
+      </select>
+      < br></br>
+      
+
 
       <label>
-        Room Number: 
-      <input type = "text" value = {this.state.currentInput2} onChange = {this.updateInput2}/>< br></br>
-      </label>
-
-      <label>
-        Location of Problem: 
-      <input type = "text" value = {this.state.currentInput4} onChange = {this.updateInput4}/>< br></br>
-      </label>
-
-      <label>
-        Comments: 
-      <textarea value ={this.state.currentInput3} onChange = {this.updateInput3}></textarea> < br></br>
+       Optional comments 
+      <textarea value ={this.state.currentInput4} onChange = {this.updateInput4}></textarea> < br></br>
       </label>
       <button type="submit" onClick={this.handleSubmit}>Submit</button>
       </form>
