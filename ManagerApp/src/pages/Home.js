@@ -21,10 +21,11 @@ class App extends React.Component {
     let reference = database.ref('Facility Request');
     reference.on("child_added", (newData) => {
       // console.log(newData.val())
+      let a = [[newData.val().comments, newData.val().floor, newData.val().machine, newData.val().problem, newData.val().time]];
       this.setState({
-        data: this.state.data.concat([[newData.val().comments, newData.val().floor, newData.val().machine, newData.val().problem, newData.val().time]])
+        data: a.concat(this.state.data)
       })
-      // console.log(this.state.data)
+      console.log(this.state.data)
     })
   }
 
