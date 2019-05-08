@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import firebase from 'firebase';
-import { firebase_config } from './firebase_config.js'
+import {firebase_config} from './firebase_config.js'
 firebase.initializeApp(firebase_config);
 const database = firebase.database();
 
@@ -72,11 +72,12 @@ class App extends Component {
     return (
       <div className="App">
         <img src={logo} />
+        <br></br>
+        <br></br>
         <form onSubmit>
 
 
 
-          <br></br>
           <select type="text" value={this.state.currentInput1} onChange={this.updateInput1}>
             <option value="" disabled selected>Floor #</option>
             <option> 1</option>
@@ -90,10 +91,13 @@ class App extends Component {
             <option> 9</option>
             <option> 10</option>
             <option> 11</option>
+            <option> 12</option>
+            <option> 13</option>
+            <option> 14</option>
           </select>
 
-
           <br></br>
+        
           <select type="text" value={this.state.currentInput2} onChange={this.updateInput2}>
             <option value="" disabled selected>Machine #</option>
             <option> A</option>
@@ -109,8 +113,8 @@ class App extends Component {
             <option> K</option>
           </select>
 
-
           <br></br>
+        
           <select type="text" value={this.state.currentInput3} onChange={this.updateInput3}>
             <option value="" disabled selected>Problem</option>
             <option> Won't fill with water</option>
@@ -124,17 +128,17 @@ class App extends Component {
             <option> Other...</option>
 
           </select>
-          < br></br>
+      
+
           <br></br>
 
 
-
-
           <textarea placeholder="Optional comments" value={this.state.currentInput4} onChange={this.updateInput4}></textarea>
-          < br></br>
-          < br></br>
+          <br></br>
           <button type="submit" onClick={this.handleSubmit}>Submit</button>
         </form>
+       
+        
       </div>
 
     );
