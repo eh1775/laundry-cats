@@ -124,13 +124,14 @@ class App extends Component{
      
       </select>
       < br></br>
+      <br></br>
       
 
 
-      <label>
-       Optional comments 
-      <textarea value ={this.state.currentInput4} onChange = {this.updateInput4}></textarea> < br></br>
-      </label>
+    
+      <textarea placeholder = "Optional comments" value ={this.state.currentInput4} onChange = {this.updateInput4}></textarea> 
+      < br></br>
+      < br></br>
       <button type="submit" onClick={this.handleSubmit}>Submit</button>
       </form>
       </div> 
