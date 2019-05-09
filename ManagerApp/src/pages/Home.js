@@ -21,7 +21,7 @@ class App extends React.Component {
     let reference = database.ref('Facility Request');
     reference.on("child_added", (newData) => {
       // console.log(newData.val())
-      let a = [[newData.val().comments, newData.val().floor, newData.val().machine, newData.val().problem, newData.val().time]];
+      let a = [[newData.val().comments, newData.val().floor, newData.val().machine, newData.val().problem, newData.val().subtime]];
       this.setState({
         data: a.concat(this.state.data)
       })
