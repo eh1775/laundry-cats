@@ -31,7 +31,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div style={{ padding: 30, paddingTop: 140 }}>
+      <div style={{ padding: 30, paddingTop: 80 }}>
         <h1>Welcome to FacilityRequest</h1>
         <Link to="/Manager">
           <Button size="large" type="primary" block>
@@ -41,19 +41,19 @@ class App extends React.Component {
           <br />
         </Link>
 
-        <div>
+        <div className='noti' style={{height: '320px', overflow: 'auto'}}>
           {
             this.state.data.map(noti => <div>
               <Link to={{ pathname: '/Worder', state: { datalist: noti} }}>
                 <Button num={noti[1]} size="large" block>
-                {noti[4]} &nbsp;&nbsp;&nbsp;FLoor&nbsp;{noti[1]}&nbsp;&nbsp;#{noti[2]}
+                {noti[4]} &nbsp;&nbsp;&nbsp;Floor&nbsp;{noti[1]}&nbsp;&nbsp;#{noti[2]}
                 </Button>
               </Link>
             </div>)
           }
         </div>
 
-        <footer style={{ textAlign: 'center', height: '30px', marginTop: '160px' }} >LaundryCats ©2019 Created by
+        <footer style={{ textAlign: 'center', height: '30px', marginTop: '40px' }} >LaundryCats ©2019 Created by
         Kertu, Selina, Emily, and Eszter</footer>
       </div>
     );
