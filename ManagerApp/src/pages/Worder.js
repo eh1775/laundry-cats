@@ -1,45 +1,14 @@
-// import React from 'react'
-
-
-// class Worder extends React.Component {
-//   render() {
-//     return <h1>Work dOe\rder</h1>
-//   }
-// }
-// export default Worder;
-
-import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { Component } from 'react';
 import Buttons from './Buttons';
-import './manager.css'
+import './manager.css';
 import { Button } from 'antd';
-// import 
 
 var logoStyle = {
   width: '30px',
   height: '36px',
 };
-// const {datalist} = this.props.location.state
-//     let floorN = datalist[1];
-//     let machineN = datalist[2]
 
-class Manager extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fn: '',
-      mn: ''
-    }
-  }
-  componentDidMount () {
-    const {datalist} = this.props.location.state
-    let floorN = datalist[1];
-    let machineN = datalist[2]
-    this.setState({
-      fn: floorN,
-      mn: machineN
-    })
-  }
+class Worder extends React.Component {
 
   goBack = () => {
     window.history.go(-1)
@@ -48,11 +17,11 @@ class Manager extends React.Component {
   render() {
     return (
       <div>
-        <div>{this.test}</div>
-        <h1 style={{ paddingLeft: '30px' }}>Floor {this.state.fn}</h1>
+        <div>{console.log(this.props.alldata)}</div>
+        <h1 style={{ paddingLeft: '30px' }}>Floor {this.props.alldata.floorN}</h1>
         <div className='allmachines'>
-          <div className='MachineArea'>
-            <p style={{ textAlign: 'center' }}>#3</p>
+          <div className='MachineArea'> 
+            <p style={{ textAlign: 'center' }}>#{this.props.alldata.machineN}</p>
             <img src={require('./Washer.png')} style={logoStyle} />
             <Buttons />
           </div>
@@ -85,4 +54,4 @@ class Manager extends React.Component {
 
   }
 }
-export default Manager;
+export default Worder;

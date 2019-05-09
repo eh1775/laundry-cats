@@ -1,0 +1,64 @@
+{
+    "Machine Status": {
+        "1A": {
+            "floor": "1",
+            "machine": "A",
+            "status": "OPEN"
+        },
+        "1B": {
+            "floor": "1",
+            "machine": "B",
+            "status": "OPEN"
+        },
+        "1C": {
+            "floor": "1",
+            "machine": "C",
+            "status": "OPEN"
+        },
+        "1D": {
+            "floor": "1",
+            "machine": "D",
+            "status": "OPEN"
+        },
+        "2A": {
+            "floor": "2",
+            "machine": "A",
+            "status": "OPEN"
+        },
+        "2B": {
+            "floor": "2",
+            "machine": "B",
+            "status": "OPEN"
+        },
+        "2C": {
+            "floor": "2",
+            "machine": "C",
+            "status": "OPEN"
+        },
+        "2D": {
+            "floor": "2",
+            "machine": "D",
+            "status": "OPEN"
+        },
+        "3A": {
+            "floor": "3",
+            "machine": "A",
+            "status": "OPEN"
+        },
+        "3B": {
+            "floor": "3",
+            "machine": "B",
+            "status": "OPEN"
+        },
+        "3C": {
+            "floor": "3",
+            "machine": "C",
+            "status": "OPEN"
+        },
+        "3D": {
+            "floor": "3",
+            "machine": "D",
+            "status": "OPEN"
+        }
+    }
+}

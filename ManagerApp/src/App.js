@@ -1,43 +1,66 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Icon } from 'antd';
-import { HashRouter as Router,Route } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom';
 import Manager from './pages/Manager';
 import Worder from './pages/Worder.js';
 import Home from './pages/Home.js';
 
-// const { Header, Footer, Content } = Layout;
+import firebase from 'firebase';
+import { firebase_config } from './firebase_config';
+firebase.initializeApp(firebase_config);
+const database = firebase.database();
 
-const routes = [
-  {
-    path: '/',
-    component: Home
-  },
-  {
-    path: '/Manager',
-    component: Manager
-  },
-  {
-    path: '/Worder',
-    component: Worder
-  },
 
-]
 
 class App extends Component {
-
-
-  state = {
-    showBack: false
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      showBack: false,
+      status: [],
+      floorN: '',
+      machineN: ''
+    }
   }
-  componentDidMount() {
+
+
+  componentDidMount = () => {
     window.addEventListener('hashchange', e => {
       this.setState({ showBack: e.newURL !== 'http://localhost:3000/#/' })
     })
+    let reference = database.ref('Facility Request');
+    let reference1 = database.ref('Machine Status');
+    reference.on("child_added", (newData) => {
+      let a = [[newData.val().comments, newData.val().floor, newData.val().machine, newData.val().problem, newData.val().subtime]];
+      this.setState({
+        data: a.concat(this.state.data)
+      })
+    })
+    reference1.on('value', function(snapshot) {
+      console.log('snapshot',snapshot.val())
+      // let a = snapshot.val()
+      // this.setState({
+      //   status: a
+      // })
+    })
+    
   }
+
+  
+
+  selectN=(f, machi) => {
+    this.setState({
+      floorN: f,
+      machineN: machi
+    })
+  }
+
   goBack = () => {
     window.history.go(-1)
   }
+
   render() {
     const { showBack } = this.state
     return (
@@ -60,11 +83,15 @@ class App extends Component {
             </div>
           )}
           <Router>
-            <div>
-              {routes.map((v, idx) => (
-                <Route key={idx} path={v.path} component={v.component} exact />
-              ))}
-            </div>
+            <Route path='/' exact component={props => {
+              return <Home data={this.state.data} selectN={this.selectN}/>
+            }}/>
+            <Route path='/Manager' exact component={props => {
+              return <Manager alldata={this.state}  />
+            }}/>
+            <Route path='/Worder' exact component={props => {
+              return <Worder alldata={this.state} />
+            }}/>
           </Router>
         </div>
       </div>

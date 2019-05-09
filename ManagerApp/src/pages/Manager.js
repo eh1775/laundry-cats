@@ -14,6 +14,7 @@ class Manager extends React.Component {
   render() {
     return (
       <div>
+        {console.log('status',this.props.alldata.status)}
         <h1 style={{ paddingLeft: '30px', fontSize: '15px' }}>F1</h1>
         <div className='allmachines'>
           <div className='MachineArea'>

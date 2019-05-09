@@ -58,7 +58,6 @@ class App extends Component {
     var minute = date.getMinutes().toString();
     var time = year + '/' + month + '/' + day + ' ' + hour + ':' + minute
     alert('Thank you! Your response was submitted');
-    // console.log(this.state.time)
     this.pushToDB(time)
     e.preventDefault();
     this.setState({
