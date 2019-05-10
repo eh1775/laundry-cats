@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Buttons from './Buttons';
-import './manager.css';
 import { Button } from 'antd';
 
 var logoStyle = {
@@ -14,36 +13,27 @@ class Worder extends React.Component {
     window.history.go(-1)
   }
 
+  updateDB = (e,num) => {
+    this.props.updateDB(e,num)
+  }
+
   render() {
     return (
       <div>
-        <div>{console.log(this.props.alldata)}</div>
-        <h1 style={{ paddingLeft: '30px' }}>Floor {this.props.alldata.floorN}</h1>
-        <div className='allmachines'>
-          <div className='MachineArea'> 
-            <p style={{ textAlign: 'center' }}>#{this.props.alldata.machineN}</p>
+        <h1 style={{ paddingLeft: '30px' ,paddingTop: '20px'}}>Floor {this.props.alldata.floorN}</h1>
+        <div className='allmachines' style={{display: 'flex', justifyContent: 'center', height: '300px'}}>
+          <div className='MachineArea' style={{paddingTop: '50px'}}> 
+            <p style={{ textAlign: 'center' }}>{this.props.alldata.floorN}{this.props.alldata.machineN}</p>
             <img src={require('./Washer.png')} style={logoStyle} />
-            <Buttons />
-          </div>
-          <div className='MachineArea'>
-            <p style={{ textAlign: 'center' }}>#4</p>
-            <img src={require('./Washer.png')} style={logoStyle} />
-            <Buttons />
-          </div>
-          <div className='MachineArea'>
-            <p style={{ textAlign: 'center' }}>#5</p>
-            <img src={require('./Dryer.png')} style={logoStyle} />
-            <Buttons />
+            <Buttons status={this.props.alldata.status[this.props.alldata.selectNoti][this.props.alldata.selectNoti]} updateDB={this.updateDB} machine={this.props.alldata.selectNoti}/>
           </div>
         </div>
         <br />
         <br />
         <br />
-        {/* <Link to="/Home"> */}
         <Button onClick={this.goBack} size="large" style={{ margin: '30px' }}>
           Only Change Status
 				</Button>
-        {/* </Link> */}
         <Button size="large" type="primary" style={{ margin: '30px' }}>
           Resolved
 				</Button>

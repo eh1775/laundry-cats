@@ -4,22 +4,10 @@ import { Link } from 'react-router-dom';
 
 import { Button } from 'antd';
 
-// import firebase from 'firebase';
-// import { firebase_config } from '../firebase_config.js'
-// firebase.initializeApp(firebase_config);
-// const database = firebase.database();
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // data: [],
-      // comlist: []
-    }
-  }
   
   handleClick(e, floorN, machineN ) {
-    console.log('noti',floorN, machineN)
     this.props.selectN(floorN, machineN)
   }
 
@@ -45,7 +33,6 @@ class App extends React.Component {
               </Link>
             </div>)
           }
-          {console.log(this.props.data)}
         </div>
 
         <footer style={{ textAlign: 'center', height: '30px', marginTop: '40px' }} >LaundryCats ©2019 Created by

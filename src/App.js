@@ -87,12 +87,6 @@ class App extends Component {
             <option> 6</option>
             <option> 7</option>
             <option> 8</option>
-            <option> 9</option>
-            <option> 10</option>
-            <option> 11</option>
-            <option> 12</option>
-            <option> 13</option>
-            <option> 14</option>
           </select>
 
           <br></br>
@@ -105,11 +99,6 @@ class App extends Component {
             <option> D</option>
             <option> E</option>
             <option> F</option>
-            <option> G</option>
-            <option> H</option>
-            <option> I</option>
-            <option> J</option>
-            <option> K</option>
           </select>
 
           <br></br>
