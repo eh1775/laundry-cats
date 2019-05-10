@@ -55,6 +55,8 @@ class App extends Component {
         { 14: '4C' },
         { 15: '4D' }
       ],
+      problemList: [],
+      commentList: [],
       floorN: '',
       machineN: '',
       selectNoti: '',
@@ -76,7 +78,9 @@ class App extends Component {
           b[i][i] = 'PENDING';
           this.setState({
             data: a.concat(this.state.data),
-            status: b
+            status: b,
+            problemList: this.state.problemList.concat(newData.val().problem),
+            commentList: this.state.commentList.concat(newData.val().comments)
           })
           break;
         }

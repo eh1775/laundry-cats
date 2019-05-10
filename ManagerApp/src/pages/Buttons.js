@@ -15,6 +15,7 @@ class Buttons extends Component {
         <div className='select'>
         </div>
         <div>
+          {/* {console.log('pro',this.props.problem)} */}
           <p>{this.props.status}</p>
           <Radio.Group value={this.props.status} onChange={this.handleChange} buttonStyle="solid" style={{ size: 'small', fontSize: '12px' }}>
             <Radio.Button value="OPEN" >OPEN</Radio.Button>
