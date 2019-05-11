@@ -73,14 +73,20 @@ class App extends Component {
       let a = [[newData.val().comments, newData.val().floor, newData.val().machine, newData.val().problem, newData.val().subtime]];
       let b = this.state.status;
       let c = (newData.val().floor + newData.val().machine).toString();
+      let d = this.state.commentList;
+      let e = this.state.problemList;
       for (var i = 0 ; i< this.state.machineList.length; i++){
         if (this.state.machineList[i][i] == c) {
           b[i][i] = 'PENDING';
+          // let f = {c: newData.val().problem}
+          d[i] = newData.val().comments;
+          e[i] = newData.val().problem;
+          // e.push({c: newData.val().comments});
           this.setState({
             data: a.concat(this.state.data),
             status: b,
-            problemList: this.state.problemList.concat(newData.val().problem),
-            commentList: this.state.commentList.concat(newData.val().comments)
+            problemList: e,
+            commentList: d
           })
           break;
         }

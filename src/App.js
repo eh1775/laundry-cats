@@ -108,7 +108,7 @@ class App extends Component {
             <option> Won't fill with water</option>
             <option> The door won't open </option>
             <option> Does not spin </option>
-            <option> Stopped mid-cicle </option>
+            <option> Stopped mid-cycle </option>
             <option> Weird noises </option>
             <option> Water not draining from washing machine </option>
             <option> Machine is displaying an error </option>

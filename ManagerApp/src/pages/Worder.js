@@ -20,7 +20,6 @@ class Worder extends React.Component {
   render() {
     return (
       <div>
-        {/* {console.log('pr',this.props.alldata.problemList[this.props.alldata.selectNoti])} */}
         <h1 style={{ paddingLeft: '30px' ,paddingTop: '20px'}}>Floor {this.props.alldata.floorN}</h1>
         <p style={{ paddingLeft: '30px'}}>Problem: {this.props.alldata.problemList[this.props.alldata.selectNoti]} </p>
         <p style={{ paddingLeft: '30px'}}>Comments: {this.props.alldata.commentList[this.props.alldata.selectNoti]} </p>
