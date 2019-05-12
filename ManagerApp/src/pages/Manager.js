@@ -114,6 +114,102 @@ class Manager extends React.Component {
               <Buttons status={this.props.statusdata[15][15]} updateDB={this.updateDB} machine='15'/>
             </div>
           </div>
+
+          <h1 style={{ paddingLeft: '30px', paddingTop: '20px', fontSize: '15px' }}>Floor 5</h1>
+          <div className='allmachines'>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[16][16]}</p>
+              <img src={require('./Dryer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[16][16]} updateDB={this.updateDB} machine='16'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[17][17]}</p>
+              <img src={require('./Washer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[17][17]} updateDB={this.updateDB} machine='17'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[18][18]}</p>
+              <img src={require('./Dryer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[18][18]} updateDB={this.updateDB} machine='18'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[19][19]}</p>
+              <img src={require('./Washer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[19][19]} updateDB={this.updateDB} machine='19'/>
+            </div>
+          </div>
+
+          <h1 style={{ paddingLeft: '30px', paddingTop: '20px', fontSize: '15px' }}>Floor 6</h1>
+          <div className='allmachines'>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[20][20]}</p>
+              <img src={require('./Dryer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[20][20]} updateDB={this.updateDB} machine='20'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[21][21]}</p>
+              <img src={require('./Washer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[21][21]} updateDB={this.updateDB} machine='21'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[22][22]}</p>
+              <img src={require('./Dryer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[22][22]} updateDB={this.updateDB} machine='22'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[23][23]}</p>
+              <img src={require('./Washer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[23][23]} updateDB={this.updateDB} machine='23'/>
+            </div>
+          </div>
+
+          <h1 style={{ paddingLeft: '30px', paddingTop: '20px', fontSize: '15px' }}>Floor 7</h1>
+          <div className='allmachines'>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[24][24]}</p>
+              <img src={require('./Dryer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[24][24]} updateDB={this.updateDB} machine='24'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[26][26]}</p>
+              <img src={require('./Washer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[26][26]} updateDB={this.updateDB} machine='26'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[26][26]}</p>
+              <img src={require('./Dryer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[26][26]} updateDB={this.updateDB} machine='26'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[27][27]}</p>
+              <img src={require('./Washer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[27][27]} updateDB={this.updateDB} machine='27'/>
+            </div>
+          </div>
+
+          <h1 style={{ paddingLeft: '30px', paddingTop: '20px', fontSize: '15px' }}>Floor 8</h1>
+          <div className='allmachines'>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[28][28]}</p>
+              <img src={require('./Dryer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[28][28]} updateDB={this.updateDB} machine='28'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[29][29]}</p>
+              <img src={require('./Washer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[29][29]} updateDB={this.updateDB} machine='29'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[30][30]}</p>
+              <img src={require('./Dryer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[30][30]} updateDB={this.updateDB} machine='30'/>
+            </div>
+            <div className='MachineArea'>
+              <p style={{ textAlign: 'center' }}>{this.props.machinedata[31][31]}</p>
+              <img src={require('./Washer.png')} style={logoStyle} />
+              <Buttons status={this.props.statusdata[31][31]} updateDB={this.updateDB} machine='31'/>
+            </div>
+          </div>
           
         </div>
       </div>
