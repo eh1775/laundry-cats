@@ -18,7 +18,6 @@ class App extends Component {
     super(props);
     this.state = {
       data: [],
-      showBack: false,
       status: [
         { 0: 'IN USE' },
         { 1: 'OPEN' },
@@ -110,10 +109,8 @@ class App extends Component {
       for (var i = 0 ; i< this.state.machineList.length; i++){
         if (this.state.machineList[i][i] == c) {
           b[i][i] = 'PENDING';
-          // let f = {c: newData.val().problem}
           d[i] = newData.val().comments;
           e[i] = newData.val().problem;
-          // e.push({c: newData.val().comments});
           this.setState({
             data: a.concat(this.state.data),
             status: b,
@@ -147,36 +144,18 @@ class App extends Component {
     })
   }
 
-  goBack = () => {
-    window.history.go(-1)
-  }
 
   render() {
-    const { showBack } = this.state
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 10 }}>
         <div style={{ background: 'white', height: 650, width: 400, border: '1px solid #ddd' }}>
-          {!showBack ? null : (
-            <div
-              style={{
-                borderBottom: '1px solid #ddd',
-                height: 50,
-                lineHeight: '50px',
-                paddingLeft: 10,
-                fontSize: 16,
-                cursor: 'pointer'
-              }}
-            >
-              <div onClick={this.goBack}>
-                <Icon type="left" /> &nbsp; Back
-							</div>
-            </div>
-          )}
+          
           <Router>
             <Route path='/' exact component={props => {
               return <Home data={this.state.data} selectN={this.selectN} />
             }} />
             <Route path='/Manager' exact component={props => {
+
               return <Manager statusdata={this.state.status} machinedata={this.state.machineList} updateDB={this.updateDB}/>
             }} />
             <Route path='/Worder' exact component={props => {
