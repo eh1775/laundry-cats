@@ -49,15 +49,17 @@ class Worder extends React.Component {
         <br />
         <br />
         <br />
-        <Link to="/">
-          <Button onClick={this.goBack} size="large" style={{ margin: '30px' }}>
-            Only Change Status
-				</Button>
-        </Link>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>
+          <Link to="/">
+            <Button onClick={this.goBack} size="large" >
+              Only Change Status
+          </Button>
+          </Link>
 
-        <Button size="large" type="primary" style={{ margin: '30px' }}>
-          Resolved
-				</Button>
+          <Button size="large" type="primary" >
+            Resolved
+          </Button>
+          </div>
       </div>
 
 

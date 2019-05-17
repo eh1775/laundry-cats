@@ -50,7 +50,8 @@ class App extends Component {
         { 28: 'OPEN' },
         { 29: 'OPEN' },
         { 30: 'OPEN' },
-        { 31: 'OPEN' }
+        { 31: 'OPEN' },
+        { 32: 'OPEN'}
       ],
       machineList: [
         { 0: '1A' },
@@ -84,7 +85,8 @@ class App extends Component {
         { 28: '8A' },
         { 29: '8B' },
         { 30: '8C' },
-        { 31: '8D' }
+        { 31: '8D' },
+        { 32: '6F' },
       ],
       problemList: [],
       commentList: [],
@@ -96,9 +98,6 @@ class App extends Component {
 
 
   componentDidMount = () => {
-    window.addEventListener('hashchange', e => {
-      this.setState({ showBack: e.newURL !== 'http://localhost:3000/#/' })
-    })
     let reference = database.ref('Facility Request');
     reference.on("child_added", (newData) => {
       let a = [[newData.val().comments, newData.val().floor, newData.val().machine, newData.val().problem, newData.val().subtime]];
@@ -147,7 +146,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: 10 }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <div style={{ background: 'white', height: 650, width: 400, border: '1px solid #ddd' }}>
           
           <Router>

@@ -35,7 +35,7 @@ class App extends React.Component {
           }
         </div>
 
-        <footer style={{ textAlign: 'center', height: '30px', marginTop: '40px' }} >LaundryCats ©2019 Created by
+        <footer style={{ textAlign: 'center', height: '30px', marginTop: '30px' }} >LaundryCats ©2019 Created by
         Kertu, Selina, Emily, and Eszter</footer>
       </div>
     );
